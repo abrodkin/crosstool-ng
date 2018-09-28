@@ -1,0 +1,24 @@
+CT_EXPERIMENTAL=y
+CT_PREFIX_DIR="${PWD}/toolchain_native_cortexa9"
+CT_ARCH_ARM=y
+CT_ARCH_CPU="cortex-a9"
+# CT_DEMULTILIB is not set
+CT_ARCH_FLOAT_HW=y
+CT_TARGET_VENDOR=""
+CT_CANADIAN=y
+CT_HOST="arm-unknown-linux-gnueabihf"
+CT_KERNEL_LINUX=y
+CT_BINUTILS_SRC_DEVEL=y
+CT_BINUTILS_DEVEL_URL="https://github.com/foss-for-synopsys-dwc-arc-processors/binutils-gdb.git"
+CT_BINUTILS_DEVEL_BRANCH="arc-2018.09-eng002"
+CT_LIBC_GLIBC=y
+CT_GLIBC_SRC_DEVEL=y
+CT_GLIBC_DEVEL_URL="https://github.com/foss-for-synopsys-dwc-arc-processors/glibc.git"
+CT_GLIBC_DEVEL_BRANCH="arc-2018.09-eng002"
+CT_CREATE_LDSO_CONF=y
+CT_GCC_SRC_DEVEL=y
+CT_GCC_DEVEL_VCS_git=y
+CT_GCC_DEVEL_URL="https://github.com/foss-for-synopsys-dwc-arc-processors/gcc.git"
+CT_GCC_DEVEL_BRANCH="arc-2018.09-eng002"
+CT_CC_LANG_CXX=y
+CT_CC_LANG_FORTRAN=y
