@@ -1,0 +1,27 @@
+From 7ae0b857dbb2cf24c025a830b818c8bd5d93f82b Mon Sep 17 00:00:00 2001
+From: Alexey Brodkin <abrodkin@synopsys.com>
+Date: Tue, 25 Sep 2018 16:52:13 +0300
+Subject: [PATCH] Revert "[MAINLINE][HACK] Allow store merging using 64-bit std
+ instructions."
+
+This reverts commit d7259830411a2f738a386a31c7588b2b6b2d29e2.
+---
+ gcc/gimple-ssa-store-merging.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gcc/gimple-ssa-store-merging.c b/gcc/gimple-ssa-store-merging.c
+index b9bb4463507d..7a074185833f 100644
+--- a/gcc/gimple-ssa-store-merging.c
++++ b/gcc/gimple-ssa-store-merging.c
+@@ -161,7 +161,7 @@
+ #include "selftest.h"
+ 
+ /* The maximum size (in bits) of the stores this pass should generate.  */
+-#define MAX_STORE_BITSIZE (TARGET_LL64 ? 2 * BITS_PER_WORD : BITS_PER_WORD)
++#define MAX_STORE_BITSIZE (BITS_PER_WORD)
+ #define MAX_STORE_BYTES (MAX_STORE_BITSIZE / BITS_PER_UNIT)
+ 
+ /* Limit to bound the number of aliasing checks for loads with the same
+-- 
+2.17.1
+
