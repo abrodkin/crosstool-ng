@@ -55,8 +55,6 @@ CT_SanitizePath
 
 # Some sanity checks in the environment and needed tools
 CT_DoLog INFO "Performing some trivial sanity checks"
-CT_TestAndAbort "Don't set LD_LIBRARY_PATH. It screws up the build." -n "${LD_LIBRARY_PATH+set}"
-CT_TestAndAbort "Don't set LIBRARY_PATH. It screws up the build." -n "${LIBRARY_PATH+set}"
 CT_TestAndAbort "Don't set LPATH. It screws up the build." -n "${LPATH+set}"
 CT_TestAndAbort "Don't set CPATH. It screws up the build." -n "${CPATH+set}"
 CT_TestAndAbort "Don't set C_INCLUDE_PATH. It screws up the build." -n "${C_INCLUDE_PATH+set}"
